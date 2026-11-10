@@ -24,7 +24,7 @@ Remplace illenium-appearance et qb-clothing sans rien casser. Standalone, QBCore
 **[⬇️ Télécharger](https://github.com/ma3iich/pure_appearance/releases/latest)** &nbsp;·&nbsp;
 **[📦 Installation](#-installation)** &nbsp;·&nbsp;
 **[⚙️ Configuration](#%EF%B8%8F-configuration)** &nbsp;·&nbsp;
-**[🧵 Packs ajoutés](#-packs-ajoutés-visages-coupes-tatouages)** &nbsp;·&nbsp;
+**[🧵 Packs et images](#-packs-ajoutés-et-images)** &nbsp;·&nbsp;
 **[🔌 Compatibilité](#-compatibilité-et-exports)** &nbsp;·&nbsp;
 **[❓ FAQ](#-faq)**
 
@@ -118,12 +118,24 @@ Pour ajouter la tienne : copie `locales/en.json` en `locales/xx.json`, traduis, 
 
 ---
 
-## 🧵 Packs ajoutés (visages, coupes, tatouages)
+## 🧵 Packs ajoutés et images
 
-- **Visages :** les visages au-delà des 46 du jeu sont trouvés tout seuls (`Config.AddonFaces = 'auto'`). Leur portrait : `web/portraits/m/<numéro>.webp` (homme) ou `web/portraits/f/<numéro>.webp` (femme). Sans image, la case montre le numéro.
-- **Coupes :** une coupe d'une collection qui n'est pas du jeu va dans « Nouveautés ». Sa photo : `web/miniatures/m/c2/<collection>/<numéro>.webp`.
+- **Visages :** les visages au-delà des 46 du jeu sont trouvés tout seuls (`Config.AddonFaces = 'auto'`).
+- **Coupes :** une coupe d'une collection qui n'est pas du jeu va dans « Nouveautés ».
 - **Tatouages :** ajoute-les dans `Config.AddonTattoos` (mêmes champs que `shared/tattoos.lua`, avec un `price` si tu veux).
 
+**Tes propres images.** Une case sans image montre son numéro (une icône pour un tatouage). Pour lui donner une image, dépose un fichier **WebP carré** (160 × 160 conseillé) au bon endroit (`m` = homme, `f` = femme), puis tape `refresh` et `restart pure_appearance` dans la console du serveur :
+
+| Élément | Où mettre l'image |
+| --- | --- |
+| Visage ajouté | `web/portraits/<m\|f>/<numéro>.webp` |
+| Coupe | `web/miniatures/<m\|f>/c2/<collection>/<numéro>.webp` (`_base` = coupes du jeu) |
+| Barbe, sourcils, poils du torse | `web/images/<m\|f>/<beard\|eyebrows\|chestHair>/<numéro affiché>.webp` |
+| Maquillage, blush, rouge à lèvres | `web/images/<m\|f>/<makeUp\|blush\|lipstick>/<numéro affiché>.webp` |
+| Tatouage (du jeu ou ajouté) | `web/images/tattoos/<name>.webp` (le `name` du tatouage, ex. `TAT_AR_000.webp`) |
+| Vêtement de la tenue de départ | dans [Pure Clothing](https://github.com/ma3iich/pure_clothing) (ses photos servent aussi ici) |
+
+Exemple : la barbe n° 12 des hommes → `web/images/m/beard/12.webp`.
 ---
 
 ## 🔌 Compatibilité et exports
@@ -143,8 +155,8 @@ Pour ajouter la tienne : copie `locales/en.json` en `locales/xx.json`, traduis, 
 
 ## ❓ FAQ
 
-<details><summary><b>Un portrait ou une coupe montre un numéro</b></summary>
-C'est un élément ajouté par un pack, sans image : voir <a href="#-packs-ajoutés-visages-coupes-tatouages">packs ajoutés</a>.
+<details><summary><b>Une case montre un numéro au lieu d'une image</b></summary>
+Elle n'a pas encore d'image : tu peux lui en donner une, voir <a href="#-packs-ajoutés-et-images">packs et images</a>.
 </details>
 
 <details><summary><b>Où sont les magasins de vêtements et les tenues ?</b></summary>
@@ -152,7 +164,7 @@ Pure Appearance s'occupe du corps et du visage. Les vêtements, c'est <a href="h
 </details>
 
 <details><summary><b>La barbe, les sourcils ou le maquillage n'ont pas d'onglet « Nouveautés »</b></summary>
-Le jeu a une liste fixe pour ces éléments : un pack peut seulement remplacer les dessins existants, jamais en ajouter.
+Le jeu a une liste fixe pour ces éléments : un pack peut seulement remplacer les dessins existants, jamais en ajouter. Si ton pack en remplace un, donne-lui sa nouvelle image : voir <a href="#-packs-ajoutés-et-images">packs et images</a>.
 </details>
 
 <details><summary><b>Un joueur veut refaire son perso gratuitement</b></summary>
@@ -199,7 +211,7 @@ Replaces illenium-appearance and qb-clothing without breaking anything. Standalo
 **[⬇️ Download](https://github.com/ma3iich/pure_appearance/releases/latest)** &nbsp;·&nbsp;
 **[📦 Installation](#-installation-1)** &nbsp;·&nbsp;
 **[⚙️ Configuration](#%EF%B8%8F-configuration-1)** &nbsp;·&nbsp;
-**[🧵 Add-on packs](#-add-on-packs-faces-hairstyles-tattoos)** &nbsp;·&nbsp;
+**[🧵 Packs and pictures](#-add-on-packs-and-pictures)** &nbsp;·&nbsp;
 **[🔌 Compatibility](#-compatibility-and-exports)** &nbsp;·&nbsp;
 **[❓ FAQ](#-faq-1)**
 
@@ -293,12 +305,24 @@ To add yours: copy `locales/en.json` to `locales/xx.json`, translate it, then `C
 
 ---
 
-## 🧵 Add-on packs (faces, hairstyles, tattoos)
+## 🧵 Add-on packs and pictures
 
-- **Faces:** faces beyond the 46 of the game are found by themselves (`Config.AddonFaces = 'auto'`). Their portrait: `web/portraits/m/<number>.webp` (male) or `web/portraits/f/<number>.webp` (female). Without a picture, the tile shows the number.
-- **Hairstyles:** a hairstyle from a collection that is not from the game goes to "New". Its picture: `web/miniatures/m/c2/<collection>/<number>.webp`.
+- **Faces:** faces beyond the 46 of the game are found by themselves (`Config.AddonFaces = 'auto'`).
+- **Hairstyles:** a hairstyle from a collection that is not from the game goes to "New".
 - **Tattoos:** add them to `Config.AddonTattoos` (same fields as `shared/tattoos.lua`, with a `price` if you want).
 
+**Your own pictures.** A tile without a picture shows its number (an icon for a tattoo). To give it a picture, drop a **square WebP** file (160 × 160 recommended) in the right place (`m` = male, `f` = female), then type `refresh` and `restart pure_appearance` in the server console:
+
+| Element | Where the picture goes |
+| --- | --- |
+| Added face | `web/portraits/<m\|f>/<number>.webp` |
+| Hairstyle | `web/miniatures/<m\|f>/c2/<collection>/<number>.webp` (`_base` = game hairstyles) |
+| Beard, eyebrows, chest hair | `web/images/<m\|f>/<beard\|eyebrows\|chestHair>/<number shown>.webp` |
+| Makeup, blush, lipstick | `web/images/<m\|f>/<makeUp\|blush\|lipstick>/<number shown>.webp` |
+| Tattoo (game or added) | `web/images/tattoos/<name>.webp` (the tattoo's `name`, ex. `TAT_AR_000.webp`) |
+| Starting outfit clothes | in [Pure Clothing](https://github.com/ma3iich/pure_clothing) (its pictures are used here too) |
+
+Example: male beard number 12 → `web/images/m/beard/12.webp`.
 ---
 
 ## 🔌 Compatibility and exports
@@ -318,8 +342,8 @@ To add yours: copy `locales/en.json` to `locales/xx.json`, translate it, then `C
 
 ## ❓ FAQ
 
-<details><summary><b>A portrait or a hairstyle shows a number</b></summary>
-It comes from a pack and has no picture: see <a href="#-add-on-packs-faces-hairstyles-tattoos">add-on packs</a>.
+<details><summary><b>A tile shows a number instead of a picture</b></summary>
+It has no picture yet: you can give it one, see <a href="#-add-on-packs-and-pictures">packs and pictures</a>.
 </details>
 
 <details><summary><b>Where are the clothing shops and outfits?</b></summary>
@@ -327,7 +351,7 @@ Pure Appearance takes care of the body and the face. Clothes are <a href="https:
 </details>
 
 <details><summary><b>Beard, eyebrows or makeup have no "New" tab</b></summary>
-The game has a fixed list for them: a pack can only replace the existing drawings, never add new ones.
+The game has a fixed list for them: a pack can only replace the existing drawings, never add new ones. If your pack replaces one, give it its new picture: see <a href="#-add-on-packs-and-pictures">packs and pictures</a>.
 </details>
 
 <details><summary><b>A player wants to redo their character for free</b></summary>

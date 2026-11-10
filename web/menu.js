@@ -333,6 +333,28 @@
         }
         return b;
     }
+    var pictures = {};
+    function withPicture(src, ready) {
+        if (pictures[src] === false) return;
+        var img = new Image();
+        img.alt = '';
+        img.onload = function () { pictures[src] = true; ready(img); };
+        img.onerror = function () { pictures[src] = false; };
+        img.src = src;
+    }
+    function pictureTile(src, num, active, pick) {
+        var b = tile('', '<span class="big">' + num + '</span>', active, pick);
+        withPicture(src, function (img) {
+            var big = b.querySelector('.big');
+            if (big) big.remove();
+            b.insertAdjacentHTML('afterbegin', '<span class="num">' + num + '</span>');
+            b.insertBefore(img, b.firstChild);
+        });
+        return b;
+    }
+    function overlayPicture(k, n) { return 'images/' + S.p.sex + '/' + k + '/' + n + '.webp'; }
+    function tattooPicture(tt) { return 'images/tattoos/' + encodeURIComponent(tt.name) + '.webp'; }
+
     function keepScroll(fn) {
         var c = $('content'), top = c.scrollTop;
         fn();
@@ -572,7 +594,7 @@
         g.appendChild(tile('', '<span class="word">' + esc(t('common.none')) + '</span>', overlayOff(o), function () { setOverlay(k, -1); keepScroll(function () { renderPanel(false); }); }));
         for (var i = 0; i < count; i++) {
             (function (s) {
-                g.appendChild(tile('', '<span class="big">' + (s + 1) + '</span>', !overlayOff(o) && o.style === s, function () {
+                g.appendChild(pictureTile(overlayPicture(k, s + 1), s + 1, !overlayOff(o) && o.style === s, function () {
                     setOverlay(k, s);
                     keepScroll(function () { renderPanel(false); });
                 }));
@@ -619,6 +641,12 @@
             '<span class="pic">' + icon('needle') + '</span>' +
             '<span><b>' + esc(tt.label || tt.name) + '</b><small>' + esc(removable ? t('sections.' + tt.zone) + ' · ' + collectionName(tt.collection) : collectionName(tt.collection)) + '</small></span>' +
             '<span class="price">' + esc(price) + '<small>' + esc(state) + '</small></span>');
+        var pic = r.querySelector('.pic');
+        withPicture(tattooPicture(tt), function (img) {
+            pic.innerHTML = '';
+            pic.classList.add('photo');
+            pic.appendChild(img);
+        });
         return on(r, function () {
             if (worn) { S.removals[tt.name] = !removed; }
             else if (inCart) { delete S.cart[tt.name]; }
