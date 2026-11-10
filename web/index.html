@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pure Appearance</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <main id="app" class="hidden">
+        <header id="title" class="ui"><img id="logo" class="hidden" alt=""><div id="title-text"></div></header>
+        <aside id="sections" class="ui"></aside>
+        <section id="panel" class="ui">
+            <div class="head">
+                <h2 id="panel-title"></h2>
+                <span id="panel-sub"></span>
+            </div>
+            <div id="tabs" class="tabs"></div>
+            <div id="controls" class="controls"></div>
+            <div id="content" class="content"></div>
+            <div id="notice" class="notice hidden"></div>
+            <footer id="footer" class="footer"></footer>
+        </section>
+    </main>
+    <div id="keys" class="ui hidden"></div>
+    <div id="modal" class="modal ui hidden">
+        <div class="box">
+            <b id="modal-title"></b>
+            <p id="modal-text"></p>
+            <div class="actions">
+                <button id="modal-no" class="button"></button>
+                <button id="modal-yes" class="button solid"></button>
+            </div>
+        </div>
+    </div>
+    <script src="menu.js"></script>
+</body>
+</html>
