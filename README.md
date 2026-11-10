@@ -19,9 +19,11 @@ Remplace illenium-appearance et qb-clothing sans rien casser. Standalone, QBCore
 [![Langues](https://img.shields.io/badge/langues-9-6e7681)](#-langues)
 [![Licence](https://img.shields.io/badge/licence-MIT-3fb950)](LICENSE)
 [![Téléchargements](https://img.shields.io/github/downloads/ma3iich/pure_appearance/total?label=T%C3%A9l%C3%A9chargements&color=2ea44f)](https://github.com/ma3iich/pure_appearance/releases)
+[![YouTube](https://img.shields.io/badge/YouTube-Vid%C3%A9o-red?logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=iadg709uEHc)
 [![Discord](https://img.shields.io/badge/Discord-Aide-5865F2?logo=discord&logoColor=white)](https://discord.gg/4d5cxh2GHs)
 
 **[⬇️ Télécharger](https://github.com/ma3iich/pure_appearance/releases/latest)** &nbsp;·&nbsp;
+**[🎬 Vidéo](https://www.youtube.com/watch?v=iadg709uEHc)** &nbsp;·&nbsp;
 **[📦 Installation](#-installation)** &nbsp;·&nbsp;
 **[⚙️ Configuration](#%EF%B8%8F-configuration)** &nbsp;·&nbsp;
 **[🧵 Packs et images](#-packs-ajoutés-et-images)** &nbsp;·&nbsp;
@@ -206,9 +208,11 @@ Replaces illenium-appearance and qb-clothing without breaking anything. Standalo
 [![Languages](https://img.shields.io/badge/languages-9-6e7681)](#-languages)
 [![License](https://img.shields.io/badge/license-MIT-3fb950)](LICENSE)
 [![Downloads](https://img.shields.io/github/downloads/ma3iich/pure_appearance/total?label=Downloads&color=2ea44f)](https://github.com/ma3iich/pure_appearance/releases)
+[![YouTube](https://img.shields.io/badge/YouTube-Video-red?logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=iadg709uEHc)
 [![Discord](https://img.shields.io/badge/Discord-Help-5865F2?logo=discord&logoColor=white)](https://discord.gg/4d5cxh2GHs)
 
 **[⬇️ Download](https://github.com/ma3iich/pure_appearance/releases/latest)** &nbsp;·&nbsp;
+**[🎬 Video](https://www.youtube.com/watch?v=iadg709uEHc)** &nbsp;·&nbsp;
 **[📦 Installation](#-installation-1)** &nbsp;·&nbsp;
 **[⚙️ Configuration](#%EF%B8%8F-configuration-1)** &nbsp;·&nbsp;
 **[🧵 Packs and pictures](#-add-on-packs-and-pictures)** &nbsp;·&nbsp;
