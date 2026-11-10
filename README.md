@@ -19,7 +19,7 @@ Remplace illenium-appearance et qb-clothing sans rien casser. Standalone, QBCore
 [![Langues](https://img.shields.io/badge/langues-9-6e7681)](#-langues)
 [![Licence](https://img.shields.io/badge/licence-MIT-3fb950)](LICENSE)
 [![Téléchargements](https://img.shields.io/github/downloads/ma3iich/pure_appearance/total?label=T%C3%A9l%C3%A9chargements&color=2ea44f)](https://github.com/ma3iich/pure_appearance/releases)
-[![Discord](https://img.shields.io/badge/Discord-Aide-5865F2?logo=discord&logoColor=white)](https://discord.gg/73w9ZanWyv)
+[![Discord](https://img.shields.io/badge/Discord-Aide-5865F2?logo=discord&logoColor=white)](https://discord.gg/4d5cxh2GHs)
 
 **[⬇️ Télécharger](https://github.com/ma3iich/pure_appearance/releases/latest)** &nbsp;·&nbsp;
 **[📦 Installation](#-installation)** &nbsp;·&nbsp;
@@ -172,7 +172,7 @@ Un admin tape <code>/appearance [id]</code> : le menu complet s'ouvre, gratuit, 
 </details>
 
 <details><summary><b>Où signaler un bug ?</b></summary>
-Viens sur le <a href="https://discord.gg/73w9ZanWyv">Discord</a> et ouvre un ticket, avec la console du serveur et la console F8.
+Viens sur le <a href="https://discord.gg/4d5cxh2GHs">Discord</a> et ouvre un ticket, avec la console du serveur et la console F8.
 </details>
 
 ---
@@ -206,7 +206,7 @@ Replaces illenium-appearance and qb-clothing without breaking anything. Standalo
 [![Languages](https://img.shields.io/badge/languages-9-6e7681)](#-languages)
 [![License](https://img.shields.io/badge/license-MIT-3fb950)](LICENSE)
 [![Downloads](https://img.shields.io/github/downloads/ma3iich/pure_appearance/total?label=Downloads&color=2ea44f)](https://github.com/ma3iich/pure_appearance/releases)
-[![Discord](https://img.shields.io/badge/Discord-Help-5865F2?logo=discord&logoColor=white)](https://discord.gg/73w9ZanWyv)
+[![Discord](https://img.shields.io/badge/Discord-Help-5865F2?logo=discord&logoColor=white)](https://discord.gg/4d5cxh2GHs)
 
 **[⬇️ Download](https://github.com/ma3iich/pure_appearance/releases/latest)** &nbsp;·&nbsp;
 **[📦 Installation](#-installation-1)** &nbsp;·&nbsp;
@@ -359,7 +359,7 @@ An admin types <code>/appearance [id]</code>: the full menu opens for free for t
 </details>
 
 <details><summary><b>Where do I report a bug?</b></summary>
-Join the <a href="https://discord.gg/73w9ZanWyv">Discord</a> and open a ticket, with the server console and the F8 console.
+Join the <a href="https://discord.gg/4d5cxh2GHs">Discord</a> and open a ticket, with the server console and the F8 console.
 </details>
 
 ---
