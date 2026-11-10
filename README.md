@@ -36,6 +36,53 @@ Remplace illenium-appearance et qb-clothing sans rien casser. Standalone, QBCore
 
 ---
 
+## 🎬 Aperçus
+
+<table>
+  <tr>
+    <th width="50%">🧬 Hérédité</th>
+    <th width="50%">🙂 Visage</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/afab0834-fe4e-4af8-9465-d42eb1f8ddb3" width="100%" controls muted></video></td>
+    <td><video src="https://github.com/user-attachments/assets/16ab729e-1f56-43fb-949b-78a8b36754ce" width="100%" controls muted></video></td>
+  </tr>
+  <tr>
+    <th width="50%">💇 Cheveux</th>
+    <th width="50%">🧔 Pilosité</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/d2c0c24d-a508-40be-87ad-e9c0b8af8315" width="100%" controls muted></video></td>
+    <td><video src="https://github.com/user-attachments/assets/b2180d68-efbe-453f-984d-2faa17d255e6" width="100%" controls muted></video></td>
+  </tr>
+  <tr>
+    <th width="50%">👕 Tenue de départ</th>
+    <th width="50%">🖋️ Tatouages</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/a93e304c-88c0-4173-9329-8aa15689c71f" width="100%" controls muted></video></td>
+    <td><video src="https://github.com/user-attachments/assets/c7ee991b-dc7e-4630-a632-a396eb14c79c" width="100%" controls muted></video></td>
+  </tr>
+  <tr>
+    <th width="50%">💈 Coiffeur</th>
+    <th width="50%">🖋️ Tatoueur</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/f3e2bcf1-b323-4be5-98e0-1d647f46d470" width="100%" controls muted></video></td>
+    <td><video src="https://github.com/user-attachments/assets/80c60f5d-cc1a-43db-868f-334b9311d823" width="100%" controls muted></video></td>
+  </tr>
+  <tr>
+    <th width="50%">🩺 Chirurgien</th>
+    <th width="50%">🎥 Caméra et touches</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/73ed7120-d1a7-4323-91df-2da727c0e7d6" width="100%" controls muted></video></td>
+    <td><video src="https://github.com/user-attachments/assets/66ffa5cc-cbce-4283-8ccf-f26488b70e71" width="100%" controls muted></video></td>
+  </tr>
+</table>
+
+---
+
 ## ✨ Fonctionnalités
 
 <table>
@@ -222,6 +269,53 @@ Replaces illenium-appearance and qb-clothing without breaking anything. Standalo
 <sub>Made by <a href="https://github.com/ma3iich">ma3iich</a></sub>
 
 </div>
+
+---
+
+## 🎬 Preview
+
+<table>
+  <tr>
+    <th width="50%">🧬 Heritage</th>
+    <th width="50%">🙂 Face</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/afab0834-fe4e-4af8-9465-d42eb1f8ddb3" width="100%" controls muted></video></td>
+    <td><video src="https://github.com/user-attachments/assets/16ab729e-1f56-43fb-949b-78a8b36754ce" width="100%" controls muted></video></td>
+  </tr>
+  <tr>
+    <th width="50%">💇 Hair</th>
+    <th width="50%">🧔 Facial hair</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/d2c0c24d-a508-40be-87ad-e9c0b8af8315" width="100%" controls muted></video></td>
+    <td><video src="https://github.com/user-attachments/assets/b2180d68-efbe-453f-984d-2faa17d255e6" width="100%" controls muted></video></td>
+  </tr>
+  <tr>
+    <th width="50%">👕 Starting outfit</th>
+    <th width="50%">🖋️ Tattoos</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/a93e304c-88c0-4173-9329-8aa15689c71f" width="100%" controls muted></video></td>
+    <td><video src="https://github.com/user-attachments/assets/c7ee991b-dc7e-4630-a632-a396eb14c79c" width="100%" controls muted></video></td>
+  </tr>
+  <tr>
+    <th width="50%">💈 Barber</th>
+    <th width="50%">🖋️ Tattoo parlor</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/f3e2bcf1-b323-4be5-98e0-1d647f46d470" width="100%" controls muted></video></td>
+    <td><video src="https://github.com/user-attachments/assets/80c60f5d-cc1a-43db-868f-334b9311d823" width="100%" controls muted></video></td>
+  </tr>
+  <tr>
+    <th width="50%">🩺 Plastic surgeon</th>
+    <th width="50%">🎥 Camera and keys</th>
+  </tr>
+  <tr>
+    <td><video src="https://github.com/user-attachments/assets/73ed7120-d1a7-4323-91df-2da727c0e7d6" width="100%" controls muted></video></td>
+    <td><video src="https://github.com/user-attachments/assets/66ffa5cc-cbce-4283-8ccf-f26488b70e71" width="100%" controls muted></video></td>
+  </tr>
+</table>
 
 ---
 
