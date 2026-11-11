@@ -91,7 +91,7 @@ Remplace illenium-appearance et qb-clothing sans rien casser. Standalone, QBCore
     <td width="50%">💈 <b>Coiffeur, tatoueur, chirurgien</b><br><sub>Tout s'essaie sur le perso avant de payer. Prix par catégorie chez le coiffeur, panier de tatouages (on en ajoute, on en retire), forfait chez le chirurgien.</sub></td>
   </tr>
   <tr>
-    <td>🧵 <b>Natif / Nouveautés</b><br><sub>Les visages, portraits, coupes et tatouages ajoutés par des packs arrivent tout seuls dans l'onglet « Nouveautés ». Les 82 coupes homme et 86 coupes femme du jeu sont livrées avec leur photo.</sub></td>
+    <td>🧵 <b>Natif / Nouveautés</b><br><sub>Les visages, portraits, coupes et tatouages ajoutés par des packs arrivent tout seuls dans l'onglet « Nouveautés ». Les coupes, barbes, sourcils, poils du torse, maquillages et les 743 tatouages du jeu sont livrés avec leur image.</sub></td>
     <td>🔁 <b>Remplacement direct</b><br><sub>Mêmes exports et événements qu'illenium-appearance et qb-clothing, mêmes tables : les autres scripts marchent sans rien changer, les joueurs gardent leur perso. Les anciens persos qb-clothing sont convertis tout seuls.</sub></td>
   </tr>
   <tr>
@@ -173,7 +173,7 @@ Pour ajouter la tienne : copie `locales/en.json` en `locales/xx.json`, traduis, 
 - **Coupes :** une coupe d'une collection qui n'est pas du jeu va dans « Nouveautés ».
 - **Tatouages :** ajoute-les dans `Config.AddonTattoos` (mêmes champs que `shared/tattoos.lua`, avec un `price` si tu veux).
 
-**Tes propres images.** Une case sans image montre son numéro (une icône pour un tatouage). Pour lui donner une image, dépose un fichier **WebP carré** (160 × 160 conseillé) au bon endroit (`m` = homme, `f` = femme), puis tape `refresh` et `restart pure_appearance` dans la console du serveur :
+**Tes propres images.** Les éléments du jeu sont livrés avec leur image. Une case sans image montre son numéro (une icône pour un tatouage). Pour donner une image à un élément ajouté, ou changer celle d'un élément que ton pack remplace, dépose un fichier **WebP carré** (160 × 160 conseillé) au bon endroit (`m` = homme, `f` = femme), puis tape `refresh` et `restart pure_appearance` dans la console du serveur :
 
 | Élément | Où mettre l'image |
 | --- | --- |
@@ -230,7 +230,7 @@ Viens sur le <a href="https://discord.gg/4d5cxh2GHs">Discord</a> et ouvre un tic
 
 Pure Appearance est publié sous **licence MIT** ([LICENSE](LICENSE)). Copyright © 2026 ma3iich.
 La liste des tatouages et le format de l'apparence viennent d'[illenium-appearance](https://github.com/iLLeniumStudios/illenium-appearance) (MIT, © 2021 snakewiz).
-Les photos des coupes sont des rendus des modèles de Grand Theft Auto V (© Rockstar Games), fournis pour les serveurs FiveM.
+Les images des coupes, barbes, maquillages et tatouages sont faites à partir des modèles et des textures de Grand Theft Auto V (© Rockstar Games), fournies pour les serveurs FiveM.
 
 </details>
 
@@ -327,7 +327,7 @@ Replaces illenium-appearance and qb-clothing without breaking anything. Standalo
     <td width="50%">💈 <b>Barber, tattoo parlor, surgeon</b><br><sub>Everything is tried on the character before paying. Price per category at the barber, tattoo cart (add some, remove some), flat fee at the surgeon.</sub></td>
   </tr>
   <tr>
-    <td>🧵 <b>Base game / New</b><br><sub>Faces, portraits, hairstyles and tattoos added by packs go to the "New" tab by themselves. The 82 male and 86 female hairstyles of the game come with their picture.</sub></td>
+    <td>🧵 <b>Base game / New</b><br><sub>Faces, portraits, hairstyles and tattoos added by packs go to the "New" tab by themselves. The game's hairstyles, beards, eyebrows, chest hair, makeup and its 743 tattoos come with their picture.</sub></td>
     <td>🔁 <b>Drop-in replacement</b><br><sub>Same exports and events as illenium-appearance and qb-clothing, same tables: your other scripts keep working, players keep their character. Old qb-clothing characters are converted by themselves.</sub></td>
   </tr>
   <tr>
@@ -409,7 +409,7 @@ To add yours: copy `locales/en.json` to `locales/xx.json`, translate it, then `C
 - **Hairstyles:** a hairstyle from a collection that is not from the game goes to "New".
 - **Tattoos:** add them to `Config.AddonTattoos` (same fields as `shared/tattoos.lua`, with a `price` if you want).
 
-**Your own pictures.** A tile without a picture shows its number (an icon for a tattoo). To give it a picture, drop a **square WebP** file (160 × 160 recommended) in the right place (`m` = male, `f` = female), then type `refresh` and `restart pure_appearance` in the server console:
+**Your own pictures.** The game's elements come with their picture. A tile without a picture shows its number (an icon for a tattoo). To give a picture to an added element, or change the one of an element your pack replaces, drop a **square WebP** file (160 × 160 recommended) in the right place (`m` = male, `f` = female), then type `refresh` and `restart pure_appearance` in the server console:
 
 | Element | Where the picture goes |
 | --- | --- |
@@ -466,6 +466,6 @@ Join the <a href="https://discord.gg/4d5cxh2GHs">Discord</a> and open a ticket, 
 
 Pure Appearance is released under the **MIT license** ([LICENSE](LICENSE)). Copyright © 2026 ma3iich.
 The tattoo list and the appearance format come from [illenium-appearance](https://github.com/iLLeniumStudios/illenium-appearance) (MIT, © 2021 snakewiz).
-The hairstyle pictures are renders of Grand Theft Auto V models (© Rockstar Games), provided for FiveM servers.
+The pictures of hairstyles, beards, makeup and tattoos are made from Grand Theft Auto V models and textures (© Rockstar Games), provided for FiveM servers.
 
 </details>
