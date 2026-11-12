@@ -119,9 +119,41 @@ AddEventHandler('pure_multicharacter:client:loaded', function(_, isNew)
     if not isNew then loadSaved() end
 end)
 
+local esxLoaded, esxChecked = false, false
+
 RegisterNetEvent('esx:playerLoaded', function()
+    esxLoaded = true
     Wait(500)
     loadSaved()
+end)
+
+RegisterNetEvent('esx:onPlayerLogout', function()
+    esxLoaded, esxChecked = false, false
+end)
+
+local function esxFemale()
+    local sex = LocalPlayer.state.sex
+    if not sex and GetResourceState('es_extended') == 'started' then
+        local ok, data = pcall(function() return exports.es_extended:getSharedObject().GetPlayerData() end)
+        sex = ok and type(data) == 'table' and data.sex or nil
+    end
+    return sex == 'f' or sex == 'F'
+end
+
+local function otherSkinMenu()
+    return GetResourceState('esx_skin') == 'started' and GetResourceMetadata('esx_skin', 'name', 0) ~= GetCurrentResourceName()
+end
+
+AddEventHandler('esx_skin:playerRegistered', function()
+    if esxChecked or otherSkinMenu() then return end
+    esxChecked = true
+    CreateThread(function()
+        local limit = GetGameTimer() + 60000
+        while not esxLoaded and GetGameTimer() < limit do Wait(100) end
+        Wait(1000)
+        if Menu.isOpen or lib.callback.await('pure_appearance:load', false) ~= nil then return end
+        createCharacter(esxFemale())
+    end)
 end)
 
 AddEventHandler('esx_skin:openSaveableMenu', function(onSave, onCancel)

@@ -5,10 +5,12 @@ lua54 'yes'
 name 'pure_appearance'
 author 'ma3iich'
 description 'Character creation, barber, tattoo parlor and plastic surgeon - drop-in replacement for illenium-appearance'
-version '1.1.0'
+version '1.1.1'
 
 provide 'illenium-appearance'
 provide 'qb-clothing'
+provide 'esx_skin'
+provide 'skinchanger'
 
 dependencies {
     'ox_lib',

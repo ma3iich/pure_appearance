@@ -17,6 +17,18 @@ do
     end
 end
 
+if Bridge.name == 'esx' then
+    CreateThread(function()
+        Wait(3000)
+        for _, name in ipairs({ 'esx_skin', 'skinchanger' }) do
+            if GetResourceState(name) == 'started' and GetResourceMetadata(name, 'name', 0) ~= GetCurrentResourceName() then
+                print(('^3[%s] %s is started: remove it from server.cfg, %s replaces it (otherwise two menus open).^0'):format(
+                    GetCurrentResourceName(), name, GetCurrentResourceName()))
+            end
+        end
+    end)
+end
+
 local core
 local function qb()
     if not core then core = exports['qb-core']:GetCoreObject() end

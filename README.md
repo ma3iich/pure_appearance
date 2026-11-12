@@ -122,7 +122,7 @@ Remplace illenium-appearance et qb-clothing sans rien casser. Standalone, QBCore
 ## 📦 Installation
 
 1. Télécharge la [dernière version](https://github.com/ma3iich/pure_appearance/releases/latest) et mets le dossier `pure_appearance` dans tes `resources`.
-2. **Retire illenium-appearance ou qb-clothing** (supprime le dossier ou son `ensure`). Pure Appearance prend leur place : les scripts qui les appellent continuent de marcher.
+2. **Retire illenium-appearance ou qb-clothing** (supprime le dossier ou son `ensure`). Pure Appearance prend leur place : les scripts qui les appellent continuent de marcher. **ESX :** retire aussi `esx_skin` et `skinchanger`, Pure Appearance les remplace (esx_multicharacter démarre sans eux).
 3. Dans `server.cfg` :
    ```cfg
    ensure oxmysql
@@ -134,7 +134,7 @@ Remplace illenium-appearance et qb-clothing sans rien casser. Standalone, QBCore
 4. Démarre le serveur. Pure Appearance utilise les mêmes tables qu'illenium-appearance (`playerskins` pour QBCore / Qbox, `users.skin` pour ESX). En standalone, la table `pure_appearance` se crée toute seule.
 5. Ouvre `config.lua` pour la langue, le look du menu, les prix et les boutiques.
 
-**Nouveau personnage :** la création s'ouvre toute seule après le formulaire de qb-multicharacter ou esx_multicharacter.
+**Nouveau personnage :** la création s'ouvre toute seule après le formulaire de qb-multicharacter, esx_multicharacter ou esx_identity (ESX sans multicharacter).
 
 ---
 
@@ -191,7 +191,7 @@ Exemple : la barbe n° 12 des hommes → `web/images/m/beard/12.webp`.
 
 **Exports d'illenium-appearance** (client) : `getPedAppearance`, `setPlayerAppearance`, `setPedAppearance`, `getPedModel`, `getPedComponents`, `getPedProps`, `getPedHeadBlend`, `getPedFaceFeatures`, `getPedHeadOverlays`, `getPedHair`, `setPlayerModel`, `setPedHeadBlend`, `setPedFaceFeatures`, `setPedHeadOverlays`, `setPedHair`, `setPedEyeColor`, `setPedComponent(s)`, `setPedProp(s)`, `setPedTattoos`.
 
-**Événements repris :** `qb-clothes:client:CreateFirstCharacter`, `qb-clothing:client:loadPlayerClothing`, `qb-clothes:loadSkin`, `qb-clothing:client:openMenu`, `qb-clothing:client:loadOutfit`, `qb-clothes:loadPlayerSkin`, `esx_skin:openSaveableMenu`, `skinchanger:loadSkin`, `skinchanger:getSkin`, `illenium-appearance:client:reloadSkin`, `illenium-appearance:server:saveAppearance` (vêtements seulement).
+**Événements repris :** `qb-clothes:client:CreateFirstCharacter`, `qb-clothing:client:loadPlayerClothing`, `qb-clothes:loadSkin`, `qb-clothing:client:openMenu`, `qb-clothing:client:loadOutfit`, `qb-clothes:loadPlayerSkin`, `esx_skin:openSaveableMenu`, `esx_skin:playerRegistered`, `skinchanger:loadSkin`, `skinchanger:getSkin`, `illenium-appearance:client:reloadSkin`, `illenium-appearance:server:saveAppearance` (vêtements seulement).
 
 | Côté | Export / événement | Rôle |
 | --- | --- | --- |
@@ -358,7 +358,7 @@ Replaces illenium-appearance and qb-clothing without breaking anything. Standalo
 ## 📦 Installation
 
 1. Download the [latest release](https://github.com/ma3iich/pure_appearance/releases/latest) and put the `pure_appearance` folder in your `resources`.
-2. **Remove illenium-appearance or qb-clothing** (delete the folder or its `ensure`). Pure Appearance takes their place: the scripts that call them keep working.
+2. **Remove illenium-appearance or qb-clothing** (delete the folder or its `ensure`). Pure Appearance takes their place: the scripts that call them keep working. **ESX:** also remove `esx_skin` and `skinchanger`, Pure Appearance replaces them (esx_multicharacter starts without them).
 3. In `server.cfg`:
    ```cfg
    ensure oxmysql
@@ -370,7 +370,7 @@ Replaces illenium-appearance and qb-clothing without breaking anything. Standalo
 4. Start the server. Pure Appearance uses the same tables as illenium-appearance (`playerskins` for QBCore / Qbox, `users.skin` for ESX). In standalone, the `pure_appearance` table is created by itself.
 5. Open `config.lua` for the language, the look of the menu, the prices and the shops.
 
-**New character:** the creation opens by itself after the form of qb-multicharacter or esx_multicharacter.
+**New character:** the creation opens by itself after the form of qb-multicharacter, esx_multicharacter or esx_identity (ESX without multicharacter).
 
 ---
 
@@ -427,7 +427,7 @@ Example: male beard number 12 → `web/images/m/beard/12.webp`.
 
 **illenium-appearance exports** (client): `getPedAppearance`, `setPlayerAppearance`, `setPedAppearance`, `getPedModel`, `getPedComponents`, `getPedProps`, `getPedHeadBlend`, `getPedFaceFeatures`, `getPedHeadOverlays`, `getPedHair`, `setPlayerModel`, `setPedHeadBlend`, `setPedFaceFeatures`, `setPedHeadOverlays`, `setPedHair`, `setPedEyeColor`, `setPedComponent(s)`, `setPedProp(s)`, `setPedTattoos`.
 
-**Events handled:** `qb-clothes:client:CreateFirstCharacter`, `qb-clothing:client:loadPlayerClothing`, `qb-clothes:loadSkin`, `qb-clothing:client:openMenu`, `qb-clothing:client:loadOutfit`, `qb-clothes:loadPlayerSkin`, `esx_skin:openSaveableMenu`, `skinchanger:loadSkin`, `skinchanger:getSkin`, `illenium-appearance:client:reloadSkin`, `illenium-appearance:server:saveAppearance` (clothes only).
+**Events handled:** `qb-clothes:client:CreateFirstCharacter`, `qb-clothing:client:loadPlayerClothing`, `qb-clothes:loadSkin`, `qb-clothing:client:openMenu`, `qb-clothing:client:loadOutfit`, `qb-clothes:loadPlayerSkin`, `esx_skin:openSaveableMenu`, `esx_skin:playerRegistered`, `skinchanger:loadSkin`, `skinchanger:getSkin`, `illenium-appearance:client:reloadSkin`, `illenium-appearance:server:saveAppearance` (clothes only).
 
 | Side | Export / event | What it does |
 | --- | --- | --- |
