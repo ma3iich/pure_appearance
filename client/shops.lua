@@ -27,7 +27,11 @@ end
 local function spawnPed(shop)
     if not shop.ped then return end
     local model = joaat(shop.ped)
-    lib.requestModel(model, 5000)
+    if not IsModelInCdimage(model) then return end
+    RequestModel(model)
+    local limit = GetGameTimer() + 30000
+    while not HasModelLoaded(model) and GetGameTimer() < limit do Wait(100) end
+    if not HasModelLoaded(model) then return end
     local c = shop.coords
     local ped = CreatePed(4, model, c.x, c.y, c.z - 1.0, c.w, false, true)
     SetModelAsNoLongerNeeded(model)
@@ -40,31 +44,45 @@ end
 local useOx = started('ox_target')
 local useQb = not useOx and started('qb-target')
 
+local function addTarget(index, shop, c, name)
+    if not useOx and not useQb then return false end
+    local ok, err = pcall(function()
+        if useOx then
+            exports.ox_target:addSphereZone({
+                coords = c, radius = 1.6, debug = false,
+                options = { { name = name, icon = 'fa-solid fa-scissors', label = label(shop.type),
+                    distance = Config.ShopDistance, onSelect = function() open(index) end } },
+            })
+        else
+            exports['qb-target']:AddCircleZone(name, c, 1.6, { name = name, useZ = true }, {
+                options = { { icon = 'fas fa-scissors', label = label(shop.type), action = function() open(index) end } },
+                distance = Config.ShopDistance,
+            })
+        end
+    end)
+    if not ok then print(('[pure_appearance] %s: %s, E key used instead'):format(useOx and 'ox_target' or 'qb-target', err)) end
+    return ok
+end
+
 local function setup(index, shop)
     blip(shop)
     local c = vector3(shop.coords.x, shop.coords.y, shop.coords.z)
     local name = 'pure_appearance_' .. index
-
-    if useOx then
-        exports.ox_target:addSphereZone({
-            coords = c, radius = 1.6, debug = false,
-            options = { { name = name, icon = 'fa-solid fa-scissors', label = label(shop.type),
-                distance = Config.ShopDistance, onSelect = function() open(index) end } },
-        })
-    elseif useQb then
-        exports['qb-target']:AddCircleZone(name, c, 1.6, { name = name, useZ = true }, {
-            options = { { icon = 'fas fa-scissors', label = label(shop.type), action = function() open(index) end } },
-            distance = Config.ShopDistance,
-        })
-    end
+    local targeted = addTarget(index, shop, c, name)
 
     local point = lib.points.new({ coords = c, distance = 40.0 })
-    function point:onEnter() self.ped = spawnPed(shop) end
+    function point:onEnter()
+        CreateThread(function()
+            local ped = spawnPed(shop)
+            if not ped then return end
+            if self.inside and not self.ped then self.ped = ped else DeleteEntity(ped) end
+        end)
+    end
     function point:onExit()
         if self.ped and DoesEntityExist(self.ped) then DeleteEntity(self.ped) end
         self.ped = nil
     end
-    if not useOx and not useQb then
+    if not targeted then
         local key = lib.points.new({ coords = c, distance = Config.ShopDistance })
         function key:onEnter() lib.showTextUI(Data.text('press', { shop = label(shop.type) })) end
         function key:onExit() lib.hideTextUI() end

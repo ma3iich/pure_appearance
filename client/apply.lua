@@ -199,16 +199,25 @@ function Appearance.set(ped, a)
     if a.tattoos and ped == PlayerPedId() then Appearance.setTattoos(ped, a.tattoos) elseif a.tattoos then applyTattoos(ped, a.tattoos) end
 end
 
+local modelBusy = false
+
 function Appearance.setPlayerModel(model)
     if type(model) == 'string' then model = joaat(model) end
     if not model or not IsModelInCdimage(model) then return PlayerPedId() end
+    while modelBusy do Wait(50) end
     if GetEntityModel(PlayerPedId()) == model then return PlayerPedId() end
+    modelBusy = true
     RequestModel(model)
-    local limit = GetGameTimer() + 5000
-    while not HasModelLoaded(model) and GetGameTimer() < limit do Wait(0) end
+    local limit = GetGameTimer() + 30000
+    while not HasModelLoaded(model) and GetGameTimer() < limit do Wait(50) end
+    if not HasModelLoaded(model) then
+        modelBusy = false
+        return PlayerPedId()
+    end
     SetPlayerModel(PlayerId(), model)
     Wait(150)
     SetModelAsNoLongerNeeded(model)
+    modelBusy = false
     local ped = PlayerPedId()
     if Appearance.isFreemode(ped) then
         SetPedDefaultComponentVariation(ped)
