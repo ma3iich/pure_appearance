@@ -48,7 +48,7 @@ function Storage.save(src, appearance)
     if Bridge.name == 'qb' or Bridge.name == 'qbx' then
         local model = appearance.model
         if Bridge.name == 'qbx' then
-            model = Data.sexOfModel(model) == 'f' and Data.MODELS.f or Data.MODELS.m
+            model = (model == Data.MODELS.f or model == joaat(Data.MODELS.f)) and Data.MODELS.f or Data.MODELS.m
         elseif type(model) == 'string' then
             model = joaat(model)
         end

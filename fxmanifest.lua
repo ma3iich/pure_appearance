@@ -5,7 +5,7 @@ lua54 'yes'
 name 'pure_appearance'
 author 'ma3iich'
 description 'Character creation, barber, tattoo parlor and plastic surgeon - drop-in replacement for illenium-appearance'
-version '1.1.3'
+version '1.1.4'
 
 provide 'illenium-appearance'
 provide 'qb-clothing'
