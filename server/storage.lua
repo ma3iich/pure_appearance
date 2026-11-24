@@ -9,6 +9,13 @@ CreateThread(function()
             `appearance` LONGTEXT NOT NULL,
             PRIMARY KEY (`identifier`)
         )]])
+    elseif Bridge.name == 'qbx' then
+        -- qbx_core hashes playerskins.model itself (joaat), so the column must hold the model name, not its hash
+        for _, name in ipairs({ 'mp_m_freemode_01', 'mp_f_freemode_01' }) do
+            local unsigned = joaat(name) & 0xFFFFFFFF
+            local signed = unsigned >= 0x80000000 and unsigned - 0x100000000 or unsigned
+            MySQL.update.await('UPDATE playerskins SET model = ? WHERE model IN (?, ?)', { name, tostring(signed), tostring(unsigned) })
+        end
     end
     ready = true
 end)
@@ -40,7 +47,11 @@ function Storage.save(src, appearance)
     local raw = json.encode(appearance)
     if Bridge.name == 'qb' or Bridge.name == 'qbx' then
         local model = appearance.model
-        if type(model) == 'string' then model = joaat(model) end
+        if Bridge.name == 'qbx' then
+            model = Data.sexOfModel(model) == 'f' and Data.MODELS.f or Data.MODELS.m
+        elseif type(model) == 'string' then
+            model = joaat(model)
+        end
         MySQL.query.await('DELETE FROM playerskins WHERE citizenid = ?', { id })
         MySQL.insert.await('INSERT INTO playerskins (citizenid, model, skin, active) VALUES (?, ?, ?, 1)', { id, tostring(model), raw })
     elseif Bridge.name == 'esx' then
